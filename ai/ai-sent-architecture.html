@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="The architecture of this support center solution revolves around NVIDIA’s prebuilt tools and the NetApp DataOps Toolkit. NVIDIA’s tools are used to rapidly d...">
-  <meta name="keywords" content=" technology, architectural diagram, hardware requirements, NVIDIA RIVA, NVIDIA TAO Toolkit, Flash storage system, Cloud Sync"><!-- Icons -->
+  <meta name="keywords" content=" technology, architectural diagram, hardware requirements, NVIDIA RIVA, NVIDIA TAO Toolkit, Flash storage system, BlueXP Copy and Sync"><!-- Icons -->
   <link rel="icon" href="/us-en/netapp-solutions/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -1182,11 +1182,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/netapp-solutions/pdfs/sidebar/Build_a_Virtual_Assistant_Using_Jarvis__Cloud_Sync__and_NeMo.pdf" 
+              href="/us-en/netapp-solutions/pdfs/sidebar/Build_a_Virtual_Assistant_Using_Jarvis__BlueXP_Copy_and_Sync__and_NeMo.pdf" 
             
           >
             <img src="/us-en/netapp-solutions/images/pdf.png" alt="" width="16" height="16"/>
-            Build a Virtual Assistant Using Jarvis, Cloud Sync, and NeMo
+            Build a Virtual Assistant Using Jarvis, BlueXP Copy and Sync, and NeMo
           </a>
           
 
@@ -5618,11 +5618,11 @@
         Solution Technology
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Build a Virtual Assistant Using Jarvis, Cloud Sync, and NeMo"
+      data-pdf-filename="Build a Virtual Assistant Using Jarvis, BlueXP Copy and Sync, and NeMo"
       data-li-level="4" 
       class="subfolders "
     ><a href="/us-en/netapp-solutions/ai/cainvidia_build_a_virtual_assistant_using_jarvis,_cloud_sync,_and_nemo_overview.html">
-        <div class="na-navbar-padding"> Build a Virtual Assistant Using Jarvis, Cloud Sync, and NeMo</div>
+        <div class="na-navbar-padding"> Build a Virtual Assistant Using Jarvis, BlueXP Copy and Sync, and NeMo</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -5655,11 +5655,11 @@
         NetApp Retail Assistant Demonstration
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Use NetApp Cloud Sync to Archive Conversation History"
+      data-pdf-filename="Use NetApp BlueXP Copy and Sync to Archive Conversation History"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/netapp-solutions/ai/cainvidia_use_netapp_cloud_sync_to_archive_conversation_history.html">
-        Use NetApp Cloud Sync to Archive Conversation History
+        Use NetApp BlueXP Copy and Sync to Archive Conversation History
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Expand Intent Models Using NeMo Training"
@@ -9341,11 +9341,19 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-04 14:08:27 +0000">05/04/2023</time>
+    <time datetime="2023-08-15 16:11:16 +0000">08/15/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/kevin-hoke">
+    <img  class="avatar avatar-small"
+          alt="kevin-hoke"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/55808219?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -9376,7 +9384,7 @@
 <h2 id="architectural-diagram">Architectural Diagram</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following diagram shows the solution architecture. There are three main environment categories: the cloud, the core, and the edge. Each of the categories can be geographically dispersed. For example, the cloud contains object stores with audio files in buckets in different regions, whereas the core might contain datacenters linked via a high-speed network or NetApp Cloud Sync. The edge nodes denote the individual human agent’s daily working platforms, where interactive dashboard tools and microphones are available to visualize sentiment and collect audio data from conversations with customers.</p>
+<p>The following diagram shows the solution architecture. There are three main environment categories: the cloud, the core, and the edge. Each of the categories can be geographically dispersed. For example, the cloud contains object stores with audio files in buckets in different regions, whereas the core might contain datacenters linked via a high-speed network or NetApp BlueXP Copy and Sync. The edge nodes denote the individual human agent’s daily working platforms, where interactive dashboard tools and microphones are available to visualize sentiment and collect audio data from conversations with customers.</p>
 </div>
 <div class="paragraph">
 <p>In GPU-accelerated datacenters, businesses can use the NVIDIA <a href="https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html" target="_blank" rel="noopener">RIVA</a> framework to build conversational AI applications, to which the <a href="https://developer.nvidia.com/tao" target="_blank" rel="noopener">Tao Toolkit</a> connects for model finetuning and retraining using transfer L-learning techniques. These compute applications and workflows are powered by the <a href="https://github.com/NetApp/netapp-dataops-toolkit" target="_blank" rel="noopener">NetApp DataOps Toolkit</a>, enabling the best data management capabilities ONTAP has to offer. The toolkit allows corporate data teams to rapidly prototype their models with associated structured and unstructured data via snapshots and clones for traceability, versioning, A/B testing, thus providing security, governance, and regulatory compliance. See the section <a href="ai-sent-design-considerations.html#storage-design">"Storage Design"</a> for more details.</p>
@@ -9497,9 +9505,9 @@ Non-streaming models: ~3100 MB</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="netapp-cloud-sync">NetApp Cloud Sync</h4>
+<h4 id="netapp-bluexp-copy-and-sync">NetApp BlueXP Copy and Sync</h4>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/occm/concept_cloud_sync.html" target="_blank" rel="noopener">Cloud Sync</a> is a NetApp service for rapid and secure data synchronization that allows you to transfer files between on-premises NFS or SMB file shares to any of the following targets:</p>
+<p><a href="https://docs.netapp.com/us-en/occm/concept_cloud_sync.html" target="_blank" rel="noopener">BlueXP Copy and Sync</a> is a NetApp service for rapid and secure data synchronization that allows you to transfer files between on-premises NFS or SMB file shares to any of the following targets:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -9533,7 +9541,7 @@ Non-streaming models: ~3100 MB</p></td>
 </ul>
 </div>
 <div class="paragraph">
-<p>Cloud Sync moves the files where you need them quickly and securely. After your data is transferred, it is fully available for use on both the source and the target. Cloud Sync continuously synchronizes the data, based on your predefined schedule, moving only the deltas, so that time and money spent on data replication is minimized. Cloud Sync is a software as a service (SaaS) tool that is simple to set up and use. Data transfers that are triggered by Cloud Sync are carried out by data brokers. You can deploy Cloud Sync data brokers in AWS, Azure, Google Cloud Platform, or on-premises.</p>
+<p>BlueXP Copy and Sync moves the files where you need them quickly and securely. After your data is transferred, it is fully available for use on both the source and the target. BlueXP Copy and Sync continuously synchronizes the data, based on your predefined schedule, moving only the deltas, so that time and money spent on data replication is minimized. BlueXP Copy and Sync is a software as a service (SaaS) tool that is simple to set up and use. Data transfers that are triggered by BlueXP Copy and Sync are carried out by data brokers. You can deploy BlueXP Copy and Sync data brokers in AWS, Azure, Google Cloud Platform, or on-premises.</p>
 </div>
 </div>
 <div class="sect3">

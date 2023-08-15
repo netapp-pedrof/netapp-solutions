@@ -1180,11 +1180,11 @@
           
           <a target="_blank" 
             
-              href="/us-en/netapp-solutions/pdfs/sidebar/Build_a_Virtual_Assistant_Using_Jarvis__Cloud_Sync__and_NeMo.pdf" 
+              href="/us-en/netapp-solutions/pdfs/sidebar/Build_a_Virtual_Assistant_Using_Jarvis__BlueXP_Copy_and_Sync__and_NeMo.pdf" 
             
           >
             <img src="/us-en/netapp-solutions/images/pdf.png" alt="" width="16" height="16"/>
-            Build a Virtual Assistant Using Jarvis, Cloud Sync, and NeMo
+            Build a Virtual Assistant Using Jarvis, BlueXP Copy and Sync, and NeMo
           </a>
           
 
@@ -5618,11 +5618,11 @@
         Solution Technology
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Build a Virtual Assistant Using Jarvis, Cloud Sync, and NeMo"
+      data-pdf-filename="Build a Virtual Assistant Using Jarvis, BlueXP Copy and Sync, and NeMo"
       data-li-level="4" 
       class="subfolders "
     ><a href="/us-en/netapp-solutions/ai/cainvidia_build_a_virtual_assistant_using_jarvis,_cloud_sync,_and_nemo_overview.html">
-        <div class="na-navbar-padding"> Build a Virtual Assistant Using Jarvis, Cloud Sync, and NeMo</div>
+        <div class="na-navbar-padding"> Build a Virtual Assistant Using Jarvis, BlueXP Copy and Sync, and NeMo</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -5655,11 +5655,11 @@
         NetApp Retail Assistant Demonstration
       </a></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Use NetApp Cloud Sync to Archive Conversation History"
+      data-pdf-filename="Use NetApp BlueXP Copy and Sync to Archive Conversation History"
       data-li-level="5#" 
       class=" "
     ><a class="na-navbar-padding" href="/us-en/netapp-solutions/ai/cainvidia_use_netapp_cloud_sync_to_archive_conversation_history.html">
-        Use NetApp Cloud Sync to Archive Conversation History
+        Use NetApp BlueXP Copy and Sync to Archive Conversation History
       </a></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Expand Intent Models Using NeMo Training"
@@ -9341,11 +9341,19 @@
 <p class="page-details">
   
     
-    <time datetime="2023-08-13 14:42:18 +0000">08/13/2023</time>
+    <time datetime="2023-08-15 16:11:16 +0000">08/15/2023</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/kevin-hoke">
+    <img  class="avatar avatar-small"
+          alt="kevin-hoke"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/55808219?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/acao8888">
     <img  class="avatar avatar-small"
           alt="acao8888"
@@ -9427,25 +9435,25 @@
 <h3 id="architecture">Architecture</h3>
 <div class="imageblock">
 <div class="content">
-<img src="./../media/snapctr_svcs_azure_architect.png" alt="This image provides a detailed picture of the Cloud Backup for Application within BlueXP console, including the UI, connector and resources it manages.">
+<img src="./../media/snapctr_svcs_azure_architect.png" alt="This image provides a detailed picture of the BlueXP backup and recovery for applications within BlueXP console, including the UI, connector and resources it manages.">
 </div>
 </div>
 <div class="paragraph">
-<p>This image provides a detailed picture of Cloud Backup for Application within the BlueXP console, including the UI, the connector, and the resources it manages.</p>
+<p>This image provides a detailed picture of BlueXP backup and recovery for applications within the BlueXP console, including the UI, the connector, and the resources it manages.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="hardware-and-software-components">Hardware and software components</h3>
-<table class="tableblock frame-all grid-all fit-content stretch">
+<div class="paragraph">
+<p><strong>Hardware</strong></p>
+</div>
+<table class="tableblock frame-none grid-rows stretch">
 <colgroup>
-<col>
-<col>
-<col>
+<col style="width: 30%;">
+<col style="width: 30%;">
+<col style="width: 40%;">
 </colgroup>
 <tbody>
-<tr>
-<td class="tableblock halign-center valign-top" colspan="3"><p class="tableblock"><strong>Hardware</strong></p></td>
-</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Azure NetApp Files storage</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Premium Service level</p></td>
@@ -9456,9 +9464,18 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Standard B4ms (4 vcpus, 16 GiB memory)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Two instances deployed, one as primary DB server and the other as clone DB server</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-center valign-top" colspan="3"><p class="tableblock"><strong>Software</strong></p></td>
-</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Software</strong></p>
+</div>
+<table class="tableblock frame-none grid-rows stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 30%;">
+<col style="width: 40%;">
+</colgroup>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RedHat Linux</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Red Hat Enterprise Linux 8.7 (LVM) - x64 Gen2</p></td>
@@ -9522,7 +9539,12 @@
 </li>
 <li>
 <p>Watch the following video walkthrough</p>
-<iframe src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=48adf2d8-3f5e-4ab3-b25c-b04a014635ac&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="203" width="360" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+<div class="videoblock">
+<div class="title">Video of deployment of Oracle and ANF</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=48adf2d8-3f5e-4ab3-b25c-b04a014635ac" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -9999,7 +10021,7 @@ Ensure that your Azure NetApp File storage has sufficient capacity for a cloned 
 </div>
 </li>
 <li>
-<p>Cloud Backup documentation</p>
+<p>BlueXP backup and recovery documentation</p>
 <div class="paragraph">
 <p><a href="https://docs.netapp.com/us-en/cloud-manager-backup-restore/index.html" target="_blank" rel="noopener">https://docs.netapp.com/us-en/cloud-manager-backup-restore/index.html</a></p>
 </div>
