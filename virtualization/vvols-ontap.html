@@ -165,7 +165,7 @@
   <script src='/us-en/netapp-solutions/js/FileSaver.min.js'></script>
   <script src='/us-en/netapp-solutions/js/jszip-utils.min.js'></script>
   <script src='/us-en/netapp-solutions/js/jszip.min.js'></script>
-  <!-- <script src='/us-en/netapp-solutions/js/pdf-ux.js'></script> -->
+  <script src='/us-en/netapp-solutions/js/pdf-ux.js'></script>
 </head>
 
 
@@ -9341,7 +9341,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-08-14 19:28:28 +0000">08/14/2023</time>
+    <time datetime="2023-08-15 23:00:03 +0000">08/15/2023</time>
     
   
 
@@ -9392,7 +9392,7 @@
 <div class="sect2">
 <h3 id="product-installation">Product Installation</h3>
 <div class="paragraph">
-<p>For new installations, deploy the virtual appliance into your vSphere environment. Current releases of ONTAP tools will automatically register themselves with your vCenter and enable the VASA Provider by default. In addition to ESXi host and vCenter Server information, you will also need the IP address configuration details for the appliance. As previously stated, the VASA Provider requires the ONTAP FlexClone license be already installed onto any ONTAP clusters you plan to use for vVols. The appliance has a built-in watchdog to ensure availability, and as a best practice should be configured with VMware High Availability and optionally Fault Tolerance features. See section 4.1 for additional details. Do not install or move the ONTAP tools appliance or vCenter Server appliance (VCSA) to vVols storage as this can prevent the appliances from restarting.</p>
+<p>For new installations, deploy the virtual appliance into your vSphere environment. Current releases of ONTAP tools will automatically register themselves with your vCenter and enable the VASA Provider by default. In addition to ESXi host and vCenter Server information, you will also need the IP address configuration details for the appliance. As previously stated, the VASA Provider requires the ONTAP FlexClone license be already installed onto any ONTAP clusters you plan to use for vVols. The appliance has a built-in watchdog to ensure availability, and as a best practice should be configured with VMware High Availability and optionally Fault Tolerance features. Do not install or move the ONTAP tools appliance or vCenter Server appliance (VCSA) to vVols storage as this can prevent the appliances from restarting.</p>
 </div>
 <div class="paragraph">
 <p>In-place upgrades of ONTAP tools are supported by using the upgrade ISO file available for download on the NetApp Support Site (NSS). Follow the Deployment and Setup Guide instructions to upgrade the appliance.</p>
@@ -9618,7 +9618,7 @@ The included SCPs are suitable for most general-purpose uses, but your requireme
 </li>
 <li>
 <p><strong>Consider using Max IOPS to control unknown or test VMs.</strong><br>
-First available in VASA Provider 7.1, Max IOPS can be used to limit IOPS to a specific vVol for an unknown workload to avoid impact on other, more critical workloads. See Table 4 for more on performance management.</p>
+First available in VASA Provider 7.1, Max IOPS can be used to limit IOPS to a specific vVol for an unknown workload to avoid impact on other, more critical workloads.</p>
 </li>
 <li>
 <p><strong>Ensure you have sufficient data LIFs.</strong><br>
@@ -9635,9 +9635,6 @@ Refer to NetApp and VMware’s other best practice guides specific to the protoc
 </div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./../media/vvols-image8.png" alt="network configuration using vVols over NFS v3" width="500"></span></p>
 </div>
 </div>
 </div>
