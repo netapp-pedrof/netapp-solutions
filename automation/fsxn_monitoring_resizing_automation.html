@@ -9341,7 +9341,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-04-19 15:35:02 +0000">04/19/2023</time>
+    <time datetime="2023-08-16 19:20:07 +0000">08/16/2023</time>
     
   
 
@@ -9354,18 +9354,19 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-vedantsethia">
+    <img  class="avatar avatar-small"
+          alt="netapp-vedantsethia"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/89522711?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph lead">
-<p>Author(s): Dhruv Tyagi, Niyaz Mohamed</p>
-</div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="overview-monitoring-and-auto-resizing-fsx-for-ontap-via-aws-lambda-function">Overview: Monitoring and Auto-Resizing FSx for ONTAP via AWS Lambda function</h2>
 <div class="sectionbody">
@@ -9419,6 +9420,9 @@
 </li>
 <li>
 <p>Ability to deploy manually or using AWS CloudFormation Template</p>
+</li>
+<li>
+<p>Ability to monitor multiple FSx for ONTAP filesystems in a single VPC</p>
 </li>
 </ul>
 </div>
@@ -9476,6 +9480,18 @@
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="automated-deployment">Automated Deployment</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Covers single FSx for ONTAP filesystem.
+</td>
+</tr>
+</table>
+</div>
 <details>
 <summary class="title">Details</summary>
 <div class="content">
@@ -9504,7 +9520,7 @@
 <p>Navigate to AWS Console &gt; <strong>S3</strong> and click on <strong>Create bucket</strong>. Create the bucket with the default settings.</p>
 </li>
 <li>
-<p>Once inside the bucket, click on <strong>Upload</strong> &gt; <strong>Add files</strong> and select <strong>Paramiko.zip</strong> and <strong>Requests.zip</strong> from the cloned GitHub repository on your system.</p>
+<p>Once inside the bucket, click on <strong>Upload</strong> &gt; <strong>Add files</strong> and select <strong>Utilities.zip</strong> from the cloned GitHub repository on your system.</p>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-s3-upload-zip-files.png" alt="This image depicts the S3 window with zip files being uploaded"></span></p>
 </div>
@@ -9615,6 +9631,18 @@ If "Does VPC have internet access?" is set to False, "SMTP Username for AWS SES"
 </div>
 <div class="sect2">
 <h3 id="manual-deployment">Manual Deployment</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/netapp-solutions/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Supports monitoring multiple FSx for ONTAP filesystems in a single VPC.
+</td>
+</tr>
+</table>
+</div>
 <details>
 <summary class="title">Details</summary>
 <div class="content">
@@ -9672,7 +9700,8 @@ Value: &lt;Enter the password for "fsxadmin" user configured on FSx for ONTAP&gt
 </div>
 </div>
 <div class="paragraph">
-<p>Click on <strong>Create parameter</strong>.</p>
+<p>Click on <strong>Create parameter</strong>.<br>
+Repeat the above steps for all FSx for ONTAP filesystems to be monitored.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-ssm-parameter.png" alt="This image depicts the SSM parameter creation window on AWS console."></span></p>
@@ -9795,13 +9824,13 @@ Advanced Settings:
 <p>Click on <strong>create a new layer</strong> under <strong>Layer source</strong></p>
 </li>
 <li>
-<p>Create 2 Layers - 1 for Requests and 1 for Paramiko and upload <strong>Requests.zip</strong> and <strong>Paramiko.zip</strong> files. Select <strong>Python 3.9</strong> as the compatible runtime and click on <strong>Create</strong>.</p>
+<p>Create a Layer and upload <strong>Utilities.zip</strong> file. Select <strong>Python 3.9</strong> as the compatible runtime and click on <strong>Create</strong>.</p>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-create-layer-paramiko.png" alt="This image depicts the Create New Layer window on AWS console."></span></p>
 </div>
 </li>
 <li>
-<p>Navigate back to AWS Lambda <strong>Add Layer</strong> &gt; <strong>Custom Layers</strong> and add the paramiko and requests layer one after the other.</p>
+<p>Navigate back to AWS Lambda <strong>Add Layer</strong> &gt; <strong>Custom Layers</strong> and add the utilities layer.</p>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-add-layer-window.png" alt="This image depicts the add layer window on AWS Lambda function console."></span></p>
 </div>
@@ -9846,6 +9875,12 @@ Advanced Settings:
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fsxList</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) List of all FSx for ONTAP filesystems to be monitored.<br>
+Include all the file systems in the list for monitoring and auto resizing.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fsxMgmtIp</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Enter the "Management endpoint - IP address" from the FSx for ONTAP console on AWS.</p></td>
@@ -9864,16 +9899,6 @@ Advanced Settings:
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resize_threshold</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Enter the threshold percentage from 0-100. This threshold will be used to measure Storage Capacity, Volume and LUN usage and when the % use of any increases above this threshold, resize activity will occur.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sender_email</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Enter the email ID registered on SES that will be used by the lambda function to send notification alerts related to monitoring and resizing.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>recipient_email</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Enter the email ID on which you want to receive the alert notifications.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fsx_password_ssm_parameter</strong></p></td>
@@ -9914,6 +9939,16 @@ Advanced Settings:
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>smtp_password_ssm_parameter</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(Optional) If "internet_access" variable is set to False, enter the path name used in AWS Parameter Store for storing the SMTP password.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sender_email</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Enter the email ID registered on SES that will be used by the lambda function to send notification alerts related to monitoring and resizing.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>recipient_email</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Enter the email ID on which you want to receive the alert notifications.</p></td>
 </tr>
 </tbody>
 </table>
