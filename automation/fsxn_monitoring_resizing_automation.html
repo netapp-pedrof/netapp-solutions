@@ -9359,24 +9359,24 @@
 <p class="page-details">
   
     
-    <time datetime="2023-08-16 19:20:07 +0000">08/16/2023</time>
+    <time datetime="2023-09-05 13:45:58 +0000">09/05/2023</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-dhruv-tyagi">
-    <img  class="avatar avatar-small"
-          alt="netapp-dhruv-tyagi"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/89078386?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-vedantsethia">
     <img  class="avatar avatar-small"
           alt="netapp-vedantsethia"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/89522711?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-dhruv-tyagi">
+    <img  class="avatar avatar-small"
+          alt="netapp-dhruv-tyagi"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/89078386?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -9389,10 +9389,10 @@
 <h2 id="overview-monitoring-and-auto-resizing-fsx-for-ontap-via-aws-lambda-function">Overview: Monitoring and Auto-Resizing FSx for ONTAP via AWS Lambda function</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>FSx for ONTAP is a first party enterprise-grade cloud storage service available on AWS that provides highly reliable, scalable, high-performing and feature-rich file storage built on the popular NetApp ONTAP file system.</p>
+<p>FSx for ONTAP is a first-party enterprise-grade cloud storage service available on AWS that provides highly reliable, scalable, high-performing and feature-rich file storage built on the popular NetApp ONTAP file system.</p>
 </div>
 <div class="paragraph">
-<p>FSx for ONTAP provides a seamless deployment and management experience. No storage expertise is required to get started. To simplify monitoring, an AWS lambda function (to automate resizing of total storage capacity, volume size or LUN size based on threshold) can be used.  This document provides a step by step guide to create an automated setup that monitors FSx for ONTAP at regular intervals, notifies and resizes when a user-specified threshold is crossed and notifies the administrator of the resizing activity.</p>
+<p>FSx for ONTAP provides a seamless deployment and management experience. No storage expertise is required to get started. To simplify monitoring, an AWS lambda function (to automate resizing of total storage capacity, volume size or LUN size based on threshold) can be used.  This document provides a step-by-step guide to creating an automated setup that monitors FSx for ONTAP at regular intervals, notifies and resizes when a user-specified threshold is crossed and notifies the administrator of the resizing activity.</p>
 </div>
 <details>
 <summary class="title">Features</summary>
@@ -9422,10 +9422,10 @@
 <p>Ability to resize any of the above when a user-defined threshold is breached</p>
 </li>
 <li>
-<p>Alerting mechanism to receive usage warning and resizing notifications via email</p>
+<p>Alerting mechanism to receive usage warnings and resizing notifications via email</p>
 </li>
 <li>
-<p>Ability to delete snapshots older than user-defined threshold</p>
+<p>Ability to delete snapshots older than the user-defined threshold</p>
 </li>
 <li>
 <p>Ability to get a list of FlexClone volumes and snapshots associated</p>
@@ -9468,7 +9468,7 @@
 </div>
 </details>
 <details>
-<summary class="title">High Level Architecture</summary>
+<summary class="title">High-Level Architecture</summary>
 <div class="content">
 <div class="ulist">
 <ul>
@@ -9476,13 +9476,13 @@
 <p>AWS Lambda Function makes API calls to FSx for ONTAP for retrieving and updating the size of Storage Capacity, Volumes and LUNs.</p>
 </li>
 <li>
-<p>"fsxadmin" password stored as secure string in AWS SSM Parameter Store for added layer of security.</p>
+<p>"fsxadmin" password stored as secure string in AWS SSM Parameter Store for an added layer of security.</p>
 </li>
 <li>
 <p>AWS SES (Simple Email Service) is used to notify end-users when a resizing event occurs.</p>
 </li>
 <li>
-<p>If deploying the solution in a VPC without internet access, VPC Endpoints for AWS SSM, FSx and SES are setup to allow Lambda to reach these services via AWS internal network.</p>
+<p>If deploying the solution in a VPC without internet access, VPC Endpoints for AWS SSM, FSx and SES are set up to allow Lambda to reach these services via AWS internal network.</p>
 </li>
 </ul>
 </div>
@@ -9551,15 +9551,15 @@ Covers single FSx for ONTAP filesystem.
 <summary class="title">Step 3: AWS SES SMTP Setup (required if no internet access available)</summary>
 <div class="content">
 <div class="paragraph">
-<p>Follow this step if you want to deploy the solution without internet access (Note: There will be added costs associated due to VPC endpoints being setup.)</p>
+<p>Follow this step if you want to deploy the solution without internet access (Note: There will be added costs associated with VPC endpoints being set up.)</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Navigate to AWS Console &gt; <strong>AWS Simple Email Service (SES)</strong> &gt; SMTP Settings and click on <strong>Create SMTP credentials</strong></p>
+<p>Navigate to AWS Console &gt; <strong>AWS Simple Email Service (SES)</strong> &gt; <strong>SMTP Settings</strong> and click on <strong>Create SMTP credentials</strong></p>
 </li>
 <li>
-<p>Enter an IAM User Name or leave it at the default value and click on Create. Save the username and password for further use.</p>
+<p>Enter an IAM User Name or leave it at the default value and click on <strong>Create User</strong>. Save the <strong>SMTP user name</strong> and <strong>SMTP password</strong> for further use.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -9629,7 +9629,7 @@ If "Does VPC have internet access?" is set to False, "SMTP Username for AWS SES"
 </div>
 </li>
 <li>
-<p>Once the CloudFormation deployment starts, the email ID mentioned in the "sender email ID" will get an email asking them to authorize use of the email address with AWS SES. Click on the link to verify the email address.</p>
+<p>Once the CloudFormation deployment starts, the email ID mentioned in the "sender email ID" will get an email asking them to authorize the use of the email address with AWS SES. Click on the link to verify the email address.</p>
 </li>
 <li>
 <p>Once the CloudFormation stack deployment is completed, if there are any warnings/notifications, an email will be sent to the recipient email ID with the notification details.</p>
@@ -9684,7 +9684,7 @@ Supports monitoring multiple FSx for ONTAP filesystems in a single VPC.
 <summary class="title">Step 2: AWS SES SMTP Setup (required if no internet access available)</summary>
 <div class="content">
 <div class="paragraph">
-<p>Follow this step if you want to deploy the solution without internet access (Note: There will be added costs associated due to VPC endpoints being setup.)</p>
+<p>Follow this step if you want to deploy the solution without internet access (Note: There will be added costs associated with VPC endpoints being set up.)</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -9745,7 +9745,7 @@ Email address: &lt;Enter an email address to be used for sending resizing notifi
 <p>Click on <strong>Create identity</strong></p>
 </div>
 <div class="paragraph">
-<p>The email ID mentioned in the "sender email ID" will get an email asking the owner to authorize use of the email address with AWS SES. Click on the link to verify the email address.</p>
+<p>The email ID mentioned in the "sender email ID" will get an email asking the owner to authorize the use of the email address with AWS SES. Click on the link to verify the email address.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-ses.png" alt="This image depicts the SES identity creation window on AWS console."></span></p>
@@ -9753,7 +9753,7 @@ Email address: &lt;Enter an email address to be used for sending resizing notifi
 </div>
 </details>
 <details>
-<summary class="title">Step 5: Setup VPC Endpoints (required if no internet access available)</summary>
+<summary class="title">Step 5: Setup VPC Endpoints (required if no internet access is available)</summary>
 <div class="content">
 <div class="admonitionblock note">
 <table>
@@ -9762,7 +9762,7 @@ Email address: &lt;Enter an email address to be used for sending resizing notifi
 <img src="/us-en/netapp-solutions/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Required only if deployed without internet access. There will be additional costs associated due to VPC endpoints.
+Required only if deployed without internet access. There will be additional costs associated with VPC endpoints.
 </td>
 </tr>
 </table>
@@ -9793,7 +9793,7 @@ Policy: &lt;Either choose Full access or set your own custom policy&gt;</pre>
 </div>
 </li>
 <li>
-<p>Follow the same process for creating SES and SSM VPC endpoints. All parameters remain same as above except Services which will correspond to <strong>com.amazonaws.&lt;region&gt;.smtp</strong> and <strong>com.amazonaws.&lt;region&gt;.ssm</strong> respectively.</p>
+<p>Follow the same process for creating SES and SSM VPC endpoints. All parameters remain the same as above except Services which will correspond to <strong>com.amazonaws.&lt;region&gt;.smtp</strong> and <strong>com.amazonaws.&lt;region&gt;.ssm</strong> respectively.</p>
 </li>
 </ol>
 </div>
@@ -9805,7 +9805,7 @@ Policy: &lt;Either choose Full access or set your own custom policy&gt;</pre>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Navigate to AWS Console &gt; <strong>AWS Lambda</strong> and click on <strong>Create function</strong> in the same region as FSx for ONTAP</p>
+<p>Navigate to AWS Console &gt; <strong>AWS Lambda</strong> &gt; <strong>Functions</strong> and click on <strong>Create function</strong> in the same region as FSx for ONTAP</p>
 </li>
 <li>
 <p>Use the default <strong>Author from scratch</strong> and update the following fields:</p>
@@ -9818,7 +9818,7 @@ Permissions: Select "Create a new role with basic Lambda permissions"
 Advanced Settings:
   Enable VPC: Checked
     VPC: &lt;Choose either the same VPC as FSx for ONTAP or a VPC that can access both FSx for ONTAP and the internet via a private subnet&gt;
-    Subnets: &lt;Choose 2 private subnets which have NAT gateway attached pointing to public subnets with internet gateway and subnets that have internet access&gt;
+    Subnets: &lt;Choose 2 private subnets that have NAT gateway attached pointing to public subnets with internet gateway and subnets that have internet access&gt;
     Security Group: &lt;Choose a Security Group&gt;</pre>
 </div>
 </div>
@@ -9833,7 +9833,7 @@ Advanced Settings:
 </div>
 </li>
 <li>
-<p>Scroll down to the <strong>Layers</strong> section of the newly created Lambda function and click on <strong>Add a layer</strong>.</p>
+<p>Navigate to the newly created Lambda function &gt; Scroll down to the <strong>Layers</strong> section and click on <strong>Add a layer</strong>.</p>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-add-layer-button.png" alt="This image depicts the add layer button on AWS Lambda function console."></span></p>
 </div>
@@ -9848,7 +9848,7 @@ Advanced Settings:
 </div>
 </li>
 <li>
-<p>Navigate back to AWS Lambda <strong>Add Layer</strong> &gt; <strong>Custom Layers</strong> and add the utilities layer.</p>
+<p>Navigate back to AWS Lambda function &gt; <strong>Add Layer</strong> &gt; <strong>Custom Layers</strong> and add the utilities layer.</p>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-add-layer-window.png" alt="This image depicts the add layer window on AWS Lambda function console."></span></p>
 </div>
@@ -9857,7 +9857,7 @@ Advanced Settings:
 </div>
 </li>
 <li>
-<p>Navigate to the <strong>Configuration</strong> tab of the Lambda function and click on <strong>Edit</strong> under <strong>General Configuration</strong>. Change the Timeout to <strong>5 mins</strong> and click Save.</p>
+<p>Navigate to the <strong>Configuration</strong> tab of the Lambda function and click on <strong>Edit</strong> under <strong>General Configuration</strong>. Change the Timeout to <strong>5 mins</strong> and click <strong>Save</strong>.</p>
 </li>
 <li>
 <p>Navigate to <strong>Permissions</strong> tab of the Lambda function and click on the role assigned. In the permissions tab of the role, click on <strong>Add permissions</strong> &gt; <strong>Create Inline policy</strong>.</p>
@@ -9896,7 +9896,7 @@ Advanced Settings:
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fsxList</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(Required) List of all FSx for ONTAP filesystems to be monitored.<br>
-Include all the file systems in the list for monitoring and auto resizing.</p></td>
+Include all the file systems in the list for monitoring and auto-resizing.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fsxMgmtIp</strong></p></td>
@@ -9926,7 +9926,7 @@ Include all the file systems in the list for monitoring and auto resizing.</p></
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>warn_notification</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Bool</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Set this variable to True to receive notification when Storage Capacity/Volume/LUN usage exceeds 75% but is less than threshold.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Required) Set this variable to True to receive a notification when Storage Capacity/Volume/LUN usage exceeds 75% but is less than the threshold.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>enable_snapshot_deletion</strong></p></td>
@@ -9975,7 +9975,7 @@ Include all the file systems in the list for monitoring and auto resizing.</p></
 </div>
 </li>
 <li>
-<p>Click on <strong>Test</strong>, create an empty test event and run the test and check if the script is running properly.</p>
+<p>Click on <strong>Test</strong>, create a test event with an empty JSON object and run the test by clicking <strong>Invoke</strong> to check if the script is running properly.</p>
 </li>
 <li>
 <p>Once tested successfully, navigate to <strong>Configuration</strong> &gt; <strong>Triggers</strong> &gt; <strong>Add Trigger</strong>.</p>
@@ -10008,7 +10008,7 @@ Schedule expression: &lt;Use "rate(1 day)" if you want the function to run daily
 <h2 id="conclusion">Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>With the provided solution, it is easy to setup a monitoring solution that regularly monitors FSx for ONTAP Storage, resizes it based on user-specified threshold and provides an alerting mechanism. This makes the process of using and monitoring FSx for ONTAP seamless freeing up administrators to focus on business-critical activities while storage grows automatically when required.</p>
+<p>With the provided solution, it is easy to set up a monitoring solution that regularly monitors FSx for ONTAP Storage, resizes it based on a user-specified threshold and provides an alerting mechanism. This makes the process of using and monitoring FSx for ONTAP seamless freeing up administrators to focus on business-critical activities while storage grows automatically when required.</p>
 </div>
 </div>
 </div>
