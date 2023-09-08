@@ -9359,7 +9359,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-08-22 05:45:25 +0000">08/22/2023</time>
+    <time datetime="2023-09-08 14:38:37 +0000">09/08/2023</time>
     
   
 
@@ -9651,22 +9651,34 @@
 </li>
 <li>
 <p>Click <strong>Add a Connector</strong> to launch the connector provisioning workflow.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_connector_03-add.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Choose your cloud provider (in this case, <strong>Amazon Web Services</strong>).</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_connector_04-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Skip the <strong>Permission</strong>, <strong>Authentication</strong>, and <strong>Networking</strong> steps if you already have them set up in your AWS account. If not, you must configure these before proceeding. From here, you could also retrieve the permissions for the AWS policy that is referenced in the previous section "<a href="#onboarding-to-bluexp-preparation">Onboarding to BlueXP preparation</a>."</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_connector_05-remind.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Enter your AWS account authentication with <strong>Access Key</strong> and <strong>Secret Key</strong>.</p>
 <div class="paragraph">
@@ -9675,10 +9687,14 @@
 </li>
 <li>
 <p>Name the connector instance and select <strong>Create Role</strong> under <strong>Details</strong>.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_connector_07-details.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Configure networking with the proper <strong>VPC</strong>, <strong>Subnet</strong>, and SSH <strong>Key Pair</strong> for connector access.</p>
 <div class="paragraph">
@@ -9693,11 +9709,11 @@
 </li>
 <li>
 <p>Review the summary page and click <strong>Add</strong> to start connector creation. It generally takes about 10 mins to complete deployment. Once completed, the connector instance appears in the AWS EC2 dashboard.</p>
-<div class="paragraph">
-<p><span class="image"><img src="./../media/snapctr_svcs_connector_10-review.png" alt="Screenshot showing this step in the GUI."></span></p>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_connector_10-review.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
 </div>
 </details>
@@ -9772,22 +9788,34 @@
 <ol class="arabic">
 <li>
 <p>From <strong>My Working Environment</strong> click <strong>Add working Environment</strong> to discover FSx deployed in AWS.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_01.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Choose <strong>Amazon Web Services</strong> as the location.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_02.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Click <strong>Discover Existing</strong> next to <strong>Amazon FSx for ONTAP</strong>.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_03.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Select the <strong>Credentials Name</strong> that you have created in previous section to grant BlueXP with the permissions that it needs to manage FSx for ONTAP. If you have not added credentials, you can add it from the <strong>Settings</strong> menu at the top right corner of the BlueXP console.</p>
 <div class="paragraph">
@@ -9796,46 +9824,74 @@
 </li>
 <li>
 <p>Choose the AWS region where Amazon FSx for ONTAP is deployed, select the FSx cluster that is hosting the Oracle database and click Add.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_05.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>The discovered Amazon FSx for ONTAP instance now appears in the working environment.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_06.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>You can log into the FSx cluster with your fsxadmin account credentials.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_07.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>After you log into Amazon FSx for ONTAP, review your database storage information (such as database volumes).</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_08.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>From the left-hand sidebar of the console, hover your mouse over the protection icon, and then click <strong>Protection</strong> &gt; <strong>Applications</strong> to open the Applications launch page. Click <strong>Discover Applications</strong>.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_09.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Select <strong>Cloud Native</strong> as the application source type.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_10.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Choose <strong>Oracle</strong> for the application type.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_setup_13.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Fill in the AWS EC2 Oracle application host details. Choose <strong>Using SSH</strong> as <strong>Host Installation Type</strong> for one step plugin installation and database discovery. Then, click on <strong>Add SSH Private Key</strong>.</p>
 <div class="paragraph">
@@ -9892,35 +9948,51 @@
 </li>
 <li>
 <p>When you are happy with the policy configuration, you can then assign your policy of choice to protect the database.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_bkup_03.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Choose the policy to assign to the database.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_bkup_04.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>After the policy is applied, the database protection status changed to <strong>Protected</strong> with a green check mark.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_bkup_05.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>The database backup runs on a predefined schedule. You can also run a one-off on-demand backup as shown below.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_bkup_06.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>The database backups details can be viewed by clicking <strong>View Details</strong> from the menu list. This includes the backup name, backup type, SCN, and backup date. A backup set covers a snapshot for both data volume and log volume. A log volume snapshot takes place right after a database volume snapshot. You can apply a filter if you are looking for a particular backup in a long list.</p>
-<div class="paragraph">
-<p><span class="image"><img src="./../media/snapctr_svcs_bkup_07.png" alt="Screenshot showing this step in the GUI."></span></p>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_bkup_07.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
 </div>
 </details>
@@ -9934,32 +10006,44 @@
 <ol class="arabic">
 <li>
 <p>For a database restore, choose the right backup, either by the SCN or backup time. Click the three dots from the database data backup, and then click <strong>Restore</strong> to initiate database restore and recovery.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_restore_01.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Choose your restore setting. If you are sure that nothing has changed in the physical database structure after the backup (such as the addition of a data file or a disk group), you can use the <strong>Force in place restore</strong> option, which is generally faster. Otherwise, do not check this box.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_restore_02.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Review and start database restore and recovery.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_restore_03.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>From the <strong>Job Monitoring</strong> tab, you can view the status of the restore job as well as any details while it is running.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_restore_05.png" alt="Screenshot showing this step in the GUI."></span></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_restore_04.png" alt="Screenshot showing this step in the GUI."></span></p>
-</div>
-</li>
-</ol>
 </div>
 </div>
 </details>
@@ -9976,41 +10060,61 @@
 <ol class="arabic">
 <li>
 <p>Select the right database backup copy, click the three dots to view the menu, and choose the <strong>Clone</strong> option.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_clone_02.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Select the <strong>Basic</strong> option if you don&#8217;t need to change any cloned database parameters.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_clone_03.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Alternatively, select <strong>Specification file</strong>, which gives you the option of downloading the current init file, making changes, and then uploading it back to the job.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_clone_03_1.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Review and launch the job.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_clone_04.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Monitor the cloning job status from the <strong>Job Monitoring</strong> tab.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_clone_07-status.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>Validate the cloned database on the EC2 instance host.</p>
-<div class="paragraph">
-<p><span class="image"><img src="./../media/snapctr_svcs_clone_08-crs.png" alt="Error: Missing Graphic Image"></span></p>
-</div>
 </li>
 </ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_clone_08-crs.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
 </div>
 </details>

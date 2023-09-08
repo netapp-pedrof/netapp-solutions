@@ -1219,7 +1219,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/netapp-solutions/blogs.html</loc>
       
-      <lastmod>2023-08-14T19:28:28+00:00</lastmod>
+      <lastmod>2023-09-08T14:38:37+00:00</lastmod>
       
     </url>
   
@@ -3151,7 +3151,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/netapp-solutions/containers/rh-os-n_overview_openshift.html</loc>
       
-      <lastmod>2023-08-14T19:28:28+00:00</lastmod>
+      <lastmod>2023-09-08T14:38:37+00:00</lastmod>
       
     </url>
   
@@ -3555,6 +3555,13 @@
     </url>
   
     <url>
+      <loc>https://docs.netapp.com/us-en/netapp-solutions/</loc>
+      
+      <lastmod>2023-09-08T14:38:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
       <loc>https://docs.netapp.com/us-en/netapp-solutions/data-analytics/sb-4154.html</loc>
       
       <lastmod>2023-08-02T14:50:34+00:00</lastmod>
@@ -3571,7 +3578,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/netapp-solutions//search.html</loc>
       
-      <lastmod>2023-09-07T15:42:42+00:00</lastmod>
+      <lastmod>2023-09-08T14:39:08+00:00</lastmod>
       
     </url>
   
@@ -3599,7 +3606,7 @@
     <url>
       <loc>https://docs.netapp.com/us-en/netapp-solutions/databases/snapctr_svcs_ora.html</loc>
       
-      <lastmod>2023-08-22T05:45:25+00:00</lastmod>
+      <lastmod>2023-09-08T14:38:37+00:00</lastmod>
       
     </url>
   
@@ -3740,6 +3747,13 @@
       <loc>https://docs.netapp.com/us-en/netapp-solutions/data-analytics/stgr-splunkss-splunk-architecture.html</loc>
       
       <lastmod>2023-05-04T14:08:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/netapp-solutions/</loc>
+      
+      <lastmod>2023-09-08T14:38:37+00:00</lastmod>
       
     </url>
   
