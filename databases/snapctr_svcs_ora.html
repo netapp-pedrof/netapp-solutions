@@ -1311,6 +1311,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5852,6 +5854,13 @@
         NetApp ONTAP AI Reference Architecture for Financial Services Workloads
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Generative AI and NetApp Value"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/netapp-solutions/ai/wp-genai.html">
+        Generative AI and NetApp Value
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="AI Deployment with NetApp E-Series and BeeGFS"
       data-li-level="3#" 
       class=" "
@@ -9359,7 +9368,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-09-08 14:38:37 +0000">09/08/2023</time>
+    <time datetime="2023-09-20 18:23:29 +0000">09/20/2023</time>
     
   
 
@@ -9601,9 +9610,6 @@
 <li>
 <p>If you need help to meet the above prerequisites for Oracle database deployment on Amazon FSx for ONTAP and EC2 compute instance, see <a href="aws_ora_fsx_ec2_iscsi_asm.html" target="_blank" rel="noopener">Oracle Database Deployment and Protection in AWS FSx/EC2 with iSCSI/ASM</a> or white paper <a href="aws_ora_fsx_ec2_deploy_intro.html" target="_blank" rel="noopener">Oracle Database Deployment on EC2 and FSx Best Practices</a></p>
 </li>
-<li>
-<p>If you need help to meet the above prerequisites for Oracle database deployment on Amazon FSx for ONTAP and EC2 compute instance, see <a href="aws_ora_fsx_ec2_iscsi_asm.html" target="_blank" rel="noopener">Oracle Database Deployment and Protection in AWS FSx/EC2 with iSCSI/ASM</a> or white paper <a href="aws_ora_fsx_ec2_deploy_intro.html" target="_blank" rel="noopener">Oracle Database Deployment on EC2 and FSx Best Practices</a></p>
-</li>
 </ol>
 </div>
 </div>
@@ -9720,6 +9726,64 @@
 </div>
 <div class="sect2">
 <h3 id="define-a-credential-in-bluexp-for-aws-resources-access">Define a credential in BlueXP for AWS resources access</h3>
+<details>
+<summary class="title">Details</summary>
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First, from AWS EC2 console, create a role in <strong>Identity and Access Management (IAM)</strong> menu <strong>Roles</strong>, <strong>Create role</strong> to start role creation workflow.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_01-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>In <strong>Select trusted entity</strong> page, choose <strong>AWS account</strong>, <strong>Another AWS account</strong>, and paste in the BlueXP account ID, which can be retrieved from BlueXP console.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_02-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>Filter permission policies by fsx and add <strong>Permissions policies</strong> to the role.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_03-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>In <strong>Role details</strong> page, name the role, add a description, then click <strong>Create role</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_04-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>Back to BlueXP console, click on setting icon on top right corner of the console to open <strong>Account credentials</strong> page, click <strong>Add credentials</strong> to start credential configuration workflow.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_05-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>Choose credential location as - <strong>Amazon Web Services - BlueXP</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_06-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>Define AWS credentials with proper <strong>Role ARN</strong>, which can be retrieved from AWS IAM role created in step one above. BlueXP <strong>account ID</strong>, which is used for creating AWS IAM role in step one.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_credential_07-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+</li>
+<li>
+<p>Review and <strong>Add</strong>.<br>
+<span class="image"><img src="./../media/snapctr_svcs_credential_08-aws.png" alt="Screenshot showing this step in the GUI."></span></p>
+</li>
+</ol>
+</div>
+</div>
+</details>
+</div>
+<div class="sect2">
+<h3 id="define-a-credential-in-bluexp-for-aws-resources-access-2">Define a credential in BlueXP for AWS resources access</h3>
 <details>
 <summary class="title">Details</summary>
 <div class="content">
@@ -9942,10 +10006,15 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>You can also create your own policy with a customized backup frequency and backup data-retention window.<br>
-<br>
-<span class="image"><img src="./../media/snapctr_svcs_bkup_02.png" alt="Screenshot showing this step in the GUI."></span></p>
+<p>You can also create your own policy with a customized backup frequency and backup data-retention window.</p>
 </li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_bkup_02.png" alt="Screenshot showing this step in the GUI."></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>When you are happy with the policy configuration, you can then assign your policy of choice to protect the database.</p>
 </li>
@@ -10115,6 +10184,9 @@
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/snapctr_svcs_clone_08-crs.png" alt="Error: Missing Graphic Image"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./../media/snapctr_svcs_clone_08-db.png" alt="Error: Missing Graphic Image"></span></p>
 </div>
 </div>
 </details>

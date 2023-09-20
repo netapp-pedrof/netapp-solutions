@@ -1311,6 +1311,8 @@
 
 
 
+
+
         </li>
       </ul>
     
@@ -5852,6 +5854,13 @@
         NetApp ONTAP AI Reference Architecture for Financial Services Workloads
       </a></li><li 
       data-pdf-exists="true" 
+      data-pdf-filename="Generative AI and NetApp Value"
+      data-li-level="3#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/us-en/netapp-solutions/ai/wp-genai.html">
+        Generative AI and NetApp Value
+      </a></li><li 
+      data-pdf-exists="true" 
       data-pdf-filename="AI Deployment with NetApp E-Series and BeeGFS"
       data-li-level="3#" 
       class=" "
@@ -9359,7 +9368,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-09-07 15:42:28 +0000">09/07/2023</time>
+    <time datetime="2023-09-20 18:23:29 +0000">09/20/2023</time>
     
   
 
@@ -9377,6 +9386,14 @@
           alt="netapp-dhruv-tyagi"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/89078386?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/kevin-hoke">
+    <img  class="avatar avatar-small"
+          alt="kevin-hoke"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/55808219?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -9510,9 +9527,6 @@ Covers single FSx for ONTAP filesystem.
 </tr>
 </table>
 </div>
-<details>
-<summary class="title">Details</summary>
-<div class="content">
 <div class="paragraph">
 <p>Follow the series of steps to complete the automated deployment of this solution:</p>
 </div>
@@ -9645,8 +9659,6 @@ If "Does VPC have internet access?" is set to False, "SMTP Username for AWS SES"
 </div>
 </details>
 </div>
-</details>
-</div>
 <div class="sect2">
 <h3 id="manual-deployment">Manual Deployment</h3>
 <div class="admonitionblock note">
@@ -9661,9 +9673,6 @@ Supports monitoring multiple FSx for ONTAP filesystems in a single VPC.
 </tr>
 </table>
 </div>
-<details>
-<summary class="title">Details</summary>
-<div class="content">
 <div class="paragraph">
 <p>Follow the series of steps to complete the manual deployment of this solution:</p>
 </div>
@@ -9718,8 +9727,10 @@ Value: &lt;Enter the password for "fsxadmin" user configured on FSx for ONTAP&gt
 </div>
 </div>
 <div class="paragraph">
-<p>Click on <strong>Create parameter</strong>.<br>
-Repeat the above steps for all FSx for ONTAP filesystems to be monitored.</p>
+<p>Click on <strong>Create parameter</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Repeat the above steps for all FSx for ONTAP filesystems to be monitored.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./../media/fsxn-monitoring-resizing-ssm-parameter.png" alt="This image depicts the SSM parameter creation window on AWS console."></span></p>
@@ -9997,8 +10008,6 @@ Schedule expression: &lt;Use "rate(1 day)" if you want the function to run daily
 </li>
 </ol>
 </div>
-</div>
-</details>
 </div>
 </details>
 </div>
